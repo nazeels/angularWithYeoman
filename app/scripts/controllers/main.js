@@ -3,8 +3,17 @@
 angular.module('ngsmartcatalogApp')
   .controller('MainCtrl', function ($scope) {
     $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
+      'test',
+      'sdfasdf',
       'Karma'
     ];
+    $scope.products = [{name:'Dinning Table',url:'http://www.ikea.com/ms/en_AE/img/campaigns/low-price/jokkmokk-table_UAE.JPG',descp:'description'},
+    					{name:'KUSINER',url:'http://www.ikea.com/ms/en_AE/img/campaigns/low-price/kusiner-box_.JPG',descp:'description'},
+    					{name:'RACK',url:'http://www.ikea.com/ms/en_AE/img/campaigns/low-price/raskog-trolley.JPG',descp:'description'}];
+
+   $scope.onclick = function () {
+   	// body...
+   	alert('slide down with details');
+   };
   });
+

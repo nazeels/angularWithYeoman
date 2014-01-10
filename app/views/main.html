@@ -17,12 +17,20 @@
         }
         </style>
 <div ng-controller="MainCtrl">
-  {{awesomeThings}}
-</div>
               <div class="topcoat-list">
                 <h3 class="topcoat-list__header">Homes R'Us</h3>
                 <ul class="topcoat-list__container">
-                  <li class="topcoat-list__item" style="display:inline-flex;">
+                <li class="topcoat-list__item" style="" ng-repeat="prd in products">
+                 <img src="{{prd.url}}"/>
+                 <div style="display: inline-block;vertical-align: top;">
+                 <input type="button" ng-click="onclick()" value="Show More" />
+                    <h3>{{prd.name}}</h3>
+
+                    <span>{{prd.descp}}</span>
+                    </div>
+                  
+                </li>
+                 <!--  <li class="topcoat-list__item" style="display:inline-flex;">
                     <img src="http://www.ikea.com/ms/en_AE/img/campaigns/low-price/jokkmokk-table_UAE.JPG"/>
                     <div>
                     <h3>Dinning Table</h3>
@@ -37,7 +45,8 @@
                   <li class="topcoat-list__item">
                     <img src="http://www.ikea.com/ms/en_AE/img/campaigns/low-price/raskog-trolley.JPG"/>
                     <p>RACK</p>
-                  </li>
+                  </li> -->
                 </ul>
               </div>
+</div>
  
