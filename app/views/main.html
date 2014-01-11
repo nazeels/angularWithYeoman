@@ -16,9 +16,106 @@
             height: 100px;
         }
         </style>
-<div ng-controller="MainCtrl">
+
+
+        <style type="text/css">
+/*@media screen and (min-width: 640px) { /* @media screen and (min-width: 880px) { 
+      .slide-menu-button {
+          display:none;
+      }
+      .main-content {
+          left:320px;
+          right:0;
+          width:auto;
+      }
+    }*/
+
+    /*sliding*/
+  html, body {
+    margin:0;
+    padding:0;
+    height: 100%;
+}
+body {
+    font-family: source-sans-pro, sans-serif;
+    position: relative;
+    width: 100%;
+    height:100%;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+body.left-nav .topcoat-navigation-bar, body.left-nav .main-content {
+    left:250px;
+}
+.topcoat-navigation-bar {
+    position:absolute;
+    width:100%;
+    z-index:100;
+    transition: left 0.2s ease-out;
+    -webkit-transition: left 0.2s ease-out;
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+}
+.side-nav {
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+    width:320px;
+    height:100%;
+    background-color:#353535;
+}
+.main-content {
+    position: absolute;
+    background: inherit;
+    left: 0;
+    padding-top:4rem;
+    width:100%;
+    height:100%;
+    transition: left 0.2s ease-out;
+    -webkit-transition: left 0.2s ease-out;
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.57);
+    -webkit-box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.57);
+    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.57);
+}
+   
+</style>
+<div ng-controller="CategoryctrlCtrl">
+<div class="topcoat-navigation-bar" >
+
+            <div class="topcoat-navigation-bar__item left quarter" ng-click="clickCategory()">
+                <a id="slide-menu-button" class="topcoat-icon-button--quiet slide-menu-button">
+                    <span class="topcoat-icon topcoat-icon--menu-stack"></span>
+                </a>
+            </div>
+            <div class="topcoat-navigation-bar__item center half">
+                <h1 class="topcoat-navigation-bar__title">Homes R'Us</h1>
+            </div>
+            <div class="topcoat-navigation-bar__item right quarter">
+                <a class="topcoat-icon-button--quiet" >
+                    <span class="topcoat-icon topcoat-icon--edit"></span>
+                </a>
+            </div>
+        </div>
+        <!-- side navigation > Ref# http://outof.me/navigation-drawer-pattern-with-topcoat-css-library/-->
+
+        <nav class="side-nav" style="background-color:transparent;"  >
+            <div class="topcoat-list__container side-nav__list__container">
+                <ul class="topcoat-list side-nav__list">
+                  <li class="topcoat-list__item side-nav__list__item" ng-repeat="cat in categories">
+                     <a href="#" class="side-nav__button">{{cat}}</a>
+                  </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- end of side navigation -->
+        </div>
+
+
+<div ng-controller="MainCtrl" class="main-content">
               <div class="topcoat-list">
-                <h3 class="topcoat-list__header">Homes R'Us</h3>
                 <ul class="topcoat-list__container">
                 <li class="topcoat-list__item" style="" ng-repeat="prd in products">
                  <img src="{{prd.url}}"/>

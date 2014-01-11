@@ -15,5 +15,14 @@ angular.module('ngsmartcatalogApp')
    	// body...
    	alert('slide down with details');
    };
+   $scope.clickCategory = function(){
+   	alert('category');
+		// var cl = document.body.classList;
+		//     if (cl.contains('left-nav')) {
+		//         cl.remove('left-nav');
+		//     } else {
+		//         cl.add('left-nav');
+		//     }
+   };
   });
 
