@@ -12,6 +12,10 @@ angular.module('ngsmartcatalogApp', [
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
+      .when('/iscroll/',{
+         templateUrl: 'views/iscroll.html',
+        controller: 'MainCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

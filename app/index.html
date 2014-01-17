@@ -9,16 +9,22 @@
     <title></title>
     <meta name="description" content="">
     <!-- <meta name="viewport" content="width=device-width"> -->
+    <meta name="viewport" content="width=device-width, user-scalable=no">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css({.tmp,app}) styles/main.css -->
-
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
     <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/topcoat/0.8.0/css/topcoat-mobile-dark.min.css">
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.0.0/animate.css">
+    <!-- <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.0.0/animate.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="http://www.justinaguilar.com/animations/css/animations.css"> -->
+    <link rel="stylesheet" type="text/css" href="https://daneden.me/animate/animate.css">
+<!-- <script type="text/javascript" src="http://cubiq.org/dropbox/iscroll4/src/iscroll.js"></script> -->
+<script type="text/javascript" src="http://lab.cubiq.org/iscroll5/build/iscroll.js"></script>
+    
     <!-- endbuild -->
   </head>
   <body ng-app="ngsmartcatalogApp">
@@ -59,6 +65,7 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/category.js"></script>
+        <script src="scripts/controllers/iscroll.js"></script>
         <!-- endbuild -->
 </body>
 </html>
