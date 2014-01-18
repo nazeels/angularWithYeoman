@@ -31,7 +31,8 @@ var myScroll;
    	{
       var details;
 	   	current.val(hideDetails);
-	   	parent.append('<div class="details animated" style="background-color:green;">More details about the products shall be here...</div>');
+      // parent.append('<div class="details animated" style="background-color:green;">More details about the products shall be here...</div>');
+	   	parent.append('<canvas id="canvas"></canvas>');
       details = parent.children('.details');
       tmp = details;
       details.addClass("flipInX");
